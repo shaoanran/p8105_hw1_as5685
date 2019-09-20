@@ -30,3 +30,18 @@ mean(dataframe1$vec_logical)
 mean(dataframe1$vec_factor)
 mean(dataframe1$vec_character)
 ```
+** The means for numeric variable and logical vector are workable, but factor and character vectors are not workable because they are not numeric. 
+
+## Multiplication of two variables
+```{r eval=FALSE}
+set.seed(1)
+logical_num = as.numeric(dataframe1$vec_logical)
+logical_fac = as.factor(dataframe1$vec_logical)
+logical_fac_num = as.numeric(as.factor(dataframe1$vec_logical))
+
+logical_num  * dataframe1$vec_numeric
+logical_fac * dataframe1$vec_numeric
+logical_fac_num * dataframe1$vec_numeric
+```
+The multiplication is not meaningful for factor
+
