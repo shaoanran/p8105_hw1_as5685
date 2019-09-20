@@ -58,3 +58,7 @@ plot_df = tibble(
   vec_factor = as.factor(vec_logical),
 )
 ```
+Short Description: 
+The size of the dataset is `r nrow(plot_df)` and `r ncol(plot_df)`.
+The mean, median, and the standard deviation of `r mean(pull(plot_df,x))`.
+The proportion of cases for which `r mean(pull(plot_df, vec_logical) == "TRUE")`.
