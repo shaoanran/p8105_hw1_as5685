@@ -1,0 +1,32 @@
+---
+title: "First Homework"
+author: "Anran Shao"
+Date: "2019/9/19" 
+output: github_document 
+---
+
+# Set up
+```{r set up,include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+```
+
+# Problem 1 
+
+## Creating a data frame and getting the mean of each variables
+```{r}
+dataframe1 = tibble(
+  vec_numeric = rnorm(8),
+  vec_logical = vec_numeric > 0,
+  vec_character = c("mouse","pig","dog","cow","rabbit","sheep","bird","penguin"),
+  vec_factor = c("pink","white","white","pink","blue","blue","pink","white"),
+  )
+class(pull(dataframe1,vec_numeric))
+class(pull(dataframe1,vec_logical))
+class(pull(dataframe1,vec_character))
+
+mean(dataframe1$vec_numeric)
+mean(dataframe1$vec_logical)
+mean(dataframe1$vec_factor)
+mean(dataframe1$vec_character)
+```
