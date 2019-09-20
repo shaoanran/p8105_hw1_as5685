@@ -1,7 +1,6 @@
 ---
 title: "First Homework"
 author: "Anran Shao"
-Date: "2019/9/19" 
 output: github_document 
 ---
 
