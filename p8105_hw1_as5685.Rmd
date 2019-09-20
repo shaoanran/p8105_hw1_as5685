@@ -62,3 +62,22 @@ Short Description:
 The size of the dataset is `r nrow(plot_df)` and `r ncol(plot_df)`.
 The mean, median, and the standard deviation of `r mean(pull(plot_df,x))`.
 The proportion of cases for which `r mean(pull(plot_df, vec_logical) == "TRUE")`.
+
+## A scatterplot of Y vs X with color points using the logical variable
+```{r}
+ggplot(plot_df, aes(x = x, y = y, color = vec_logical)) + geom_point()
+ggsave("p8105_hw1_as5685.pdf")
+```
+logical variable is 0 or 1, so the two colors indicating false or true. 
+
+## A scatterplot of Y vs X with color points using the numeric variable
+```{r}
+ggplot(plot_df, aes(x = x, y = y, color = vec_numeric)) + geom_point()
+```
+The numeric variable is continuous, so the color scale is continuous and color is changing from light to dark with the change of value of x and y. 
+
+## A scatterplot of Y vs X with color points using the factor variable
+```{r}
+ggplot(plot_df, aes(x = x, y = y, color = vec_factor)) + geom_point()
+```
+factor variable is categorical, so the two colors indicating false or true. 
