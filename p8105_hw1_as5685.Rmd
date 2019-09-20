@@ -43,7 +43,6 @@ logical_num  * dataframe1$vec_numeric
 logical_fac * dataframe1$vec_numeric
 logical_fac_num * dataframe1$vec_numeric
 ```
-The multiplication is not meaningful for factor
 
 # Problem2 -- the use of inline R code, plotting, and the behavior of ggplot for variables of different types.
 ## Creating a data frame
